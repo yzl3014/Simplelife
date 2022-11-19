@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>Simplelife</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <!-- 随机展示背景图片 -->
+    <script type="text/javascript">
+        var imgSrcs = ["https://tva1.sinaimg.cn/large/466f79e8ly1gzb0wu6hjaj21hc0u0jv4.jpg",
+            "https://tva1.sinaimg.cn/large/466f79e8ly1gzb0wtpuvvj21hc0u0gq6.jpg",
+            "https://tva1.sinaimg.cn/large/466f79e8ly1gzb0wukplfj21hc0u042a.jpg",
+            "https://tva1.sinaimg.cn/large/466f79e8ly1gzb0ww55ugj21hc0u0k1a.jpg",
+            "https://tva1.sinaimg.cn/large/466f79e8ly1gzb0wtzq84j21hc0u0tdz.jpg"
+        ];
+        var randomBgIndex = parseInt(Math.random() * (imgSrcs.length));
+
+        $(document).ready(
+            function () {
+                $("body").css("background-image", "url(" + imgSrcs[randomBgIndex] + ")");
+            });
+        // https://www.freesion.com/article/8361218505/
+    </script>
+</head>
+
+<body>
+    <!-- 可以更改文本！ -->
+    <div class="centerVbox">
+        <center class="title">
+            <p>My Blog!</p>
+            <!-- 下方文本（id="contents"）更改无效！请去</body> -->
+            <p style="font-size:14px;font-family: underTitle;" id="contents"></p>
+        </center>
+    </div>
+    <footer>
+        <a href="https://github.com/yzl3014/Simplelife">Open Source on Github</a> | 
+        <a href="https://github.com/yzl3014">Made by Yzl3014</a>
+    </footer>
+</body>
+<script>
+    function start() {
+        let str = 'Hello from my site!'   /*可以更改文本*/
+        let str_ = ''
+        let i = 0
+        let content = document.getElementById('contents')
+        content.innerHTML = '<p>_</p>'
+        setTimeout(function () {
+            let timer = setInterval(() => {
+                if (str_.length < str.length) {
+                    str_ += str[i++]
+                    content.innerHTML = '<p>' + str_ + '_</p>'//打印时加光标
+                } else {
+                    clearInterval(timer)
+                    content.innerHTML = '<p>' + str_ + '</p>'
+                }
+            }, 100)
+        }, 500)
+    }
+    start()
+</script>
+
+</html>
