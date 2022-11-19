@@ -57,12 +57,12 @@
         @font-face {
             /*自制字体*/
             font-family: mainTitle;
-            src: url('font.TTF');
+            src: url('https://gcore.jsdelivr.net/yzl3014/simplelife/font.TTF');
             /*华文细黑体*/
         }
 
         @font-face {
             /*自制字体*/
             font-family: underTitle;
-            src: url('Droid-Sans-Mono.ttf');
+            src: url('https://gcore.jsdelivr.net/yzl3014/simplelife/Droid-Sans-Mono.ttf');
         }
