@@ -1,7 +1,7 @@
 # Simplelife - 静态个人主页
 ![主要编程语言](http://img.shields.io/static/v1?label=Language&message=html&color=blue)
 ![Github版本](https://badge.fury.io/gh/yzl3014%2FSimplelife.svg)
-![不支持IE](http://img.shields.io/static/v1?label=IE&message=Unsupported&color=red)<br>
+![不支持IE](http://img.shields.io/static/v1?label=IE&message=Unsupported&color=red)
 ![协议](https://img.shields.io/static/v1?label=Licence&message=BY-NC-SA+4.0&color=orange)
 实时DEMO：https://sldemo.yuanzj.top/ （SimpleLife DEMO）<br>
 作者Blog：https://yuanzj.top/<br>
