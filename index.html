@@ -5,7 +5,7 @@
     <title>Simplelife</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- 随机展示背景图片 -->
     <script type="text/javascript">
         var imgSrcs = ["https://tva1.sinaimg.cn/large/466f79e8ly1gzb0wu6hjaj21hc0u0jv4.jpg",
@@ -30,34 +30,14 @@
         <center class="title">
             <p>My Blog!</p>
             <!-- 下方文本（id="contents"）更改无效！请去</body> -->
-            <p style="font-size:14px;font-family: underTitle;" id="contents"></p>
+            <a class="underTitles" id="contents" target="_blank"></a>
         </center>
     </div>
     <footer>
-        <a href="https://github.com/yzl3014/Simplelife" style="color: rgb(139, 154, 168);">Open Source on Github</a> | 
-        <a href="https://github.com/yzl3014" style="color: rgb(139, 154, 168);">Made by Yzl3014</a>
+        <a href="https://github.com/yzl3014/Simplelife">Simplelife | Open Source on Github</a> |
+        <a href="https://github.com/yzl3014">Made by Yzl3014</a>
     </footer>
 </body>
-<script>
-    function start() {
-        let str = 'Hello from my site!'   /*可以更改文本*/
-        let str_ = ''
-        let i = 0
-        let content = document.getElementById('contents')
-        content.innerHTML = '<p>_</p>'
-        setTimeout(function () {
-            let timer = setInterval(() => {
-                if (str_.length < str.length) {
-                    str_ += str[i++]
-                    content.innerHTML = '<p>' + str_ + '_</p>'//打印时加光标
-                } else {
-                    clearInterval(timer)
-                    content.innerHTML = '<p>' + str_ + '</p>'
-                }
-            }, 100)
-        }, 500)
-    }
-    start()
-</script>
+<script src="index.js"></script>
 
 </html>

@@ -15,7 +15,7 @@
         .centerVbox {
             /* Center Vertically */
             position: absolute;
-            width: auto;
+            width: 700px;
             /*宽度自动匹配*/
             height: 150px;
             /*高度固定*/
@@ -25,7 +25,7 @@
             left: 0;
             right: 0;
             margin: auto;
-            overflow:hidden;
+            overflow: hidden;
             /*隐藏滚动条*/
             /* https://blog.csdn.net/weixin_48596030/article/details/123904667 */
         }
@@ -43,6 +43,36 @@
             color: white;
         }
 
+        .underTitles {
+            font-size: 14px;
+            font-family: underTitle;
+            line-height: 15px;
+            /*文本自动换行*/
+            word-wrap: break-word;
+            font-weight: bold;
+            /* 酷炫彩虹渐变效果 
+            摘自：https: //cloud.tencent.com/developer/article/1897885?from=15425 */
+            background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #e71111 50%, #16e60f 75%, #147B96);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            /*解决内核不同导致的css适配问题*/
+            -webkit-background-size: 200% 100%;
+            background-size: 200% 100%;
+            -webkit-animation: maskedAnimation 5s infinite linear;
+            animation: maskedAnimation 5s infinite linear;
+        }
+
+        @keyframes maskedAnimation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -100% 0;
+            }
+        }
+
         footer {
             width: 100%;
             bottom: 5.5px;
@@ -50,19 +80,25 @@
             color: rgb(139, 154, 168);
             text-align: center;
             font-size: .6em;
-            letter-spacing:.2px;
+            letter-spacing: .2px;
             text-shadow: 3px 3px 5px #708090;
+        }
+
+        footer a {
+            /*只会对在<footer>之中的<a>有效！*/
+            color: rgb(139, 154, 168);
+            text-decoration: none;
         }
 
         @font-face {
             /*自制字体*/
             font-family: mainTitle;
-            src: url('https://gcore.jsdelivr.net/yzl3014/simplelife/font.TTF');
+            src: url('https://cdn.jsdelivr.net/gh/yzl3014/simplelife/font.TTF');
             /*华文细黑体*/
         }
 
         @font-face {
             /*自制字体*/
             font-family: underTitle;
-            src: url('https://gcore.jsdelivr.net/yzl3014/simplelife/Droid-Sans-Mono.ttf');
+            src: url('https://cdn.jsdelivr.net/gh/yzl3014/simplelife/Droid-Sans-Mono.ttf');
         }
