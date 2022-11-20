@@ -36,7 +36,7 @@ function start() {
 function getYiyanAndStart() {
     $.ajax({
         type: 'GET',
-        url: 'http://api.kekc.cn/api/yien',
+        url: 'https://api.kekc.cn/api/yien',
         data: '',
         dataType: 'JSON',
         error: function () {
